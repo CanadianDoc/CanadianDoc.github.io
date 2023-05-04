@@ -151,11 +151,11 @@ body.darkMode .bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 250px;
-  height: 110vh;
 }
 
 .intro > h1 {
+  padding-top: 250px;
+  height: 110vh;
   text-align: left;
   font-size: 2.6rem;
 }
