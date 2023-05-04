@@ -7,6 +7,7 @@ function scrollToDestination(destination) {
   const scrollOptions = {
     top: destinationTop, // scroll to the top of the destination section
     behavior: "smooth", // enable smooth scrolling
+    duration: 1000,
   };
 
   window.scrollTo(scrollOptions);
