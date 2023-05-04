@@ -18,9 +18,12 @@
   margin: 0;
 }
 
-html body {
+html,
+body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -73,13 +76,24 @@ body.darkMode .navLink i {
   color: var(--textLightMode);
 }
 
+body.darkMode .navbar {
+  background-color: var(--bgLightMode);
+}
+
 .navbar {
-  min-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  min-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  background: var(--bgDarkMode);
+  z-index: 0;
 }
+
 .navMenu {
   display: flex;
   justify-content: space-between;
@@ -151,7 +165,7 @@ body.darkMode .bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -199,4 +213,9 @@ body.darkMode .bar {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+}
+
+.aboutMe {
+  height: 100vh;
+  width: 100%;
 }
