@@ -1,0 +1,185 @@
+:root {
+	--bgDarkMode: #141821;
+	--textDarkMode: white;
+
+	--bgLightMode: white;
+	--textLightMode: black;
+
+	/*--aHighlight: #00ff00;*/
+	--aHighlight: #5cb85c;
+
+	--nameG1: #ff94c2;
+	--nameG2: #8fc1e3;
+	--nameG3: #c0d461;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: var(--bgDarkMode);
+	color: var(--textDarkMode);
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	height: 100vh;
+	margin: 0px;
+}
+
+.navLink i {
+	color: var(--textDarkMode);
+}
+i:hover {
+	color: var(--aHighlight) !important;
+	animation: bounce 0.5s forwards;
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+body.darkMode {
+	background-color: var(--bgLightMode);
+	color: var(--textLightMode);
+}
+body.darkMode .navLogo {
+	color: var(--textLightMode);
+}
+body.darkMode .navLink i {
+	color: var(--textLightMode);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+.navbar {
+	min-height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 24px;
+}
+.navMenu {
+	display: flex;
+	justify-content: space-between;
+	align-items: right;
+	gap: 60px;
+}
+.navLink,
+.navLogo {
+	transition: 0.7s ease;
+}
+.menuIcon {
+	display: none;
+	cursor: pointer;
+}
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: var(--textDarkMode);
+}
+body.darkMode .bar {
+	background-color: var(--textLightMode);
+}
+@media (max-width: 1024px) {
+	.menuIcon {
+		display: block;
+	}
+
+	.menuIcon.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	.menuIcon.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.menuIcon.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.navMenu {
+		position: fixed;
+		left: -100%;
+		top: 70px;
+		gap: 0;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+		background-color: var(--bgDarkMode);
+	}
+
+	body.darkMode .navMenu {
+		background-color: var(--bgLightMode);
+	}
+
+	.navItem {
+		margin: 20px 0;
+	}
+
+	.navMenu.active {
+		left: 0;
+	}
+}
+
+.intro {
+	padding: 0 24px;
+}
+
+@keyframes background-pan {
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: -200% center;
+	}
+}
+.nameGradient {
+	animation: background-pan 3s linear infinite;
+	background: linear-gradient(
+		to right,
+		var(--nameG1),
+		var(--nameG2),
+		var(--nameG3),
+		var(--nameG1)
+	);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+}
+.jobGradient {
+	/* Note to self, think about change jobGradient later*/
+	animation: background-pan 3s linear infinite;
+	background: linear-gradient(
+		to right,
+		var(--nameG1),
+		var(--nameG2),
+		var(--nameG3),
+		var(--nameG1)
+	);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+}
