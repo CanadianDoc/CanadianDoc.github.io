@@ -164,6 +164,7 @@ body.darkMode .bar {
 		var(--nameG1)
 	);
 	background-size: 200%;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	white-space: nowrap;
@@ -179,6 +180,7 @@ body.darkMode .bar {
 		var(--nameG1)
 	);
 	background-size: 200%;
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	white-space: nowrap;
