@@ -167,6 +167,10 @@ body.darkMode .bar {
 		background-color: var(--bgDarkMode);
 	}
 
+	.navMenu #bulb {
+		margin-bottom: 30px;
+	}
+
 	body.darkMode .navMenu {
 		background-color: var(--bgLightMode);
 	}
