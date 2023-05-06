@@ -33,6 +33,7 @@ body {
 	font-weight: 400;
 	height: 100vh;
 	margin: 0px;
+	overflow-x: hidden;
 }
 
 .navLink i {
@@ -93,11 +94,29 @@ body.darkMode .navbar {
 	background: var(--bgDarkMode);
 }
 
+.navLink {
+	position: relative;
+}
+
+.navText {
+	position: absolute;
+	bottom: -25px; /* adjust this value to control the distance between the text and the navbar */
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	font-weight: bold;
+}
+.navLink:hover .navText {
+	opacity: 1;
+}
+
 .navMenu {
 	display: flex;
 	justify-content: space-between;
 	align-items: right;
 	gap: 60px;
+	margin-right: 70px;
 }
 .navLink,
 .navLogo {
@@ -172,7 +191,7 @@ body.darkMode .bar {
 .intro > h1 {
 	padding: 35% 0;
 	text-align: left;
-	font-size: 2.6rem;
+	font-size: 6vw;
 }
 
 @keyframes background-pan {
@@ -215,17 +234,18 @@ body.darkMode .bar {
 	white-space: nowrap;
 }
 
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 20vw;
+}
+
 .skills {
 	height: 100vh;
 	width: 100%;
-	background: linear-gradient(
-		to bottom right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3)
-	);
+	background-color: var(--bgDarkMode);
 }
-
 .projects {
 	height: 100vh;
 	width: 100%;
@@ -235,12 +255,7 @@ body.darkMode .bar {
 .aboutMe {
 	height: 100vh;
 	width: 100%;
-	background: linear-gradient(
-		to bottom right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3)
-	);
+	background-color: var(--bgDarkMode);
 }
 
 .contactMe {

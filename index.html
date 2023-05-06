@@ -10,6 +10,7 @@
     <script src="scripts/menuScript.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/ease.js"></script>
+    <script src="scripts/navText.js"></script>
 
   </head>
 
@@ -23,41 +24,49 @@
           <li class="navItem">
             <a href="#" class="navLink" id="skills">
               <i class="fa-solid fa-2x fa-gear"></i>
+              <span class="navText">Skills</span>
             </a>
           </li>
           <li class="navItem">
             <a href="#" class="navLink" id="projects">
               <i class="fa-solid fa-2x fa-code"></i>
+              <span class="navText">Projects</span>
             </a>
           </li>
           <li class="navItem">
             <a href="#" class="navLink" id="aboutMe">
               <i class="fa-solid fa-2x fa-address-card"></i>
+              <span class="navText">AboutMe</span>
             </a>
           </li>
           <li class="navItem">
-            <a href="#" class="navLink" id="resume">
+            <a href="pdf/Resume.pdf" class="navLink" target="_blank">
               <i class="fa-solid fa-2x fa-file"></i>
+              <span class="navText">Resume</span>
             </a>
           </li>
           <li class="navItem">
             <a href="https://github.com/CanadianDoc" class="navLink" target="_blank">
               <i class="fa-brands fa-2x fa-github"></i>
+              <span class="navText">Github</span>
             </a>
           </li>
           <li class="navItem">
             <a href="https://www.linkedin.com/in/junekang223/" class="navLink" target="_blank">
               <i class="fa-brands fa-2x fa-linkedin"></i>
+              <span class="navText">LinkedIn</span>
             </a>
           </li>
           <li class="navItem">
             <a href="#" class="navLink" id="contactMe">
               <i class="fa-solid fa-2x fa-envelope"></i>
+              <span class="navText">ContactMe</span>
             </a>
           </li>
           <li class="navItem">
             <a href="#" class="navLink" id="darkMode">
               <i class="fa-regular fa-2x fa-lightbulb"></i>
+              <span class="navText" id="darkModeText">LightMode</span>
             </a>
           </li>
         </ul>
@@ -75,18 +84,19 @@
         <span class="jobGradient">Software developer</span>.
       </h1>
     </div>
-    <div class="skills">
+    <section class="skills">
       <h1>Skills</h1>
-    </div>
-    <div class="projects">
+    </section>
+    <section class="projects">
       <h1>Projects</h1>
-    </div>
-    <div class="aboutMe">
+    </section>
+    <section class="aboutMe" id="bubbleTop">
       <h1>About Me</h1>
-    </div>
-    <div class="contactMe">
+    </section>
+
+    <section class="contactMe" id="bubbleBottom">
       <h1>Contact Me</h1>
-    </div>
+    </section>
   </body>
 
 </html>
