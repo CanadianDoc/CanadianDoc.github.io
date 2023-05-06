@@ -91,7 +91,6 @@ body.darkMode .navbar {
 	align-items: center;
 	padding: 0 24px;
 	background: var(--bgDarkMode);
-	z-index: 10;
 }
 
 .navMenu {
@@ -242,4 +241,10 @@ body.darkMode .bar {
 		var(--nameG2),
 		var(--nameG3)
 	);
+}
+
+.contactMe {
+	height: 100vh;
+	width: 100%;
+	background-color: var(--bgDarkMode);
 }

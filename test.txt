@@ -1,0 +1,3 @@
+            <!--<a href="pdf/Resume.pdf" class="navLink" target="_blank">-->
+
+            <script src="scripts/ease.js"></script>
