@@ -11,6 +11,9 @@
 	--nameG1: #ff94c2;
 	--nameG2: #8fc1e3;
 	--nameG3: #c0d461;
+
+	--skillBarColourDarkMode: #353b48;
+	--skillBarColourLightMode: #e9ecef;
 }
 
 * {
@@ -101,7 +104,7 @@ body.darkMode .navbar {
 
 .navText {
 	position: absolute;
-	bottom: -25px; /* adjust this value to control the distance between the text and the navbar */
+	bottom: -25px;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
@@ -128,7 +131,7 @@ body.darkMode .navbar {
 	cursor: pointer;
 	padding-right: 40px;
 }
-.bar {
+.menubar {
 	display: block;
 	width: 25px;
 	height: 3px;
@@ -137,7 +140,7 @@ body.darkMode .navbar {
 	transition: all 0.3s ease-in-out;
 	background-color: var(--textDarkMode);
 }
-body.darkMode .bar {
+body.darkMode .menubar {
 	background-color: var(--textLightMode);
 }
 @media (max-width: 1024px) {
@@ -145,13 +148,13 @@ body.darkMode .bar {
 		display: block;
 	}
 
-	.menuIcon.active .bar:nth-child(2) {
+	.menuIcon.active .menubar:nth-child(2) {
 		opacity: 0;
 	}
-	.menuIcon.active .bar:nth-child(1) {
+	.menuIcon.active .menubar:nth-child(1) {
 		transform: translateY(8px) rotate(45deg);
 	}
-	.menuIcon.active .bar:nth-child(3) {
+	.menuIcon.active .menubar:nth-child(3) {
 		transform: translateY(-8px) rotate(-45deg);
 	}
 
@@ -240,24 +243,85 @@ body.darkMode .bar {
 }
 
 section {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: 100px 20vw;
 }
 
 .skills {
-	height: 100vh;
-	width: 100%;
+	padding: 50px 24px;
+	list-style: none;
+	height: 110vh;
+	width: 50%;
+	color: var(--textDarkMode);
+	background-color: var(--bgDarkMode);
+	align-items: revert;
+	list-style: none;
+}
+body.darkMode .skills {
+	background-color: var(--bgLightMode);
+	color: var(--textLightMode);
+}
+.skills h1 {
+	text-align: center;
+}
+h3 {
+	margin: 5px;
+}
+.skills li {
+	margin: 20px 0;
+	padding: 10px;
+}
+.sbar {
+	background: var(--skillBarColourDarkMode);
+	display: block;
+	height: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 1);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+body.darkMode .sbar {
+	background: var(--skillBarColourLightMode);
+}
+.sbar:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+		0 10px 10px rgba(0, 0, 0, 1);
+}
+.bar {
+	height: 100%;
+	float: left;
+	border-radius: 5px;
 	background: linear-gradient(
 		to right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3),
-		var(--nameG1)
+		#5ca5e4,
+		#4cb0b8,
+		#4cb4a5,
+		#4bb994,
+		#50c08c,
+		#68c786,
+		#89ce80,
+		#b1d97a
 	);
+	transition: width 1s;
 }
+.show {
+	opacity: 1;
+}
+.bar.show {
+	width: var(--percentage, 0%);
+}
+.bar.animate {
+	animation: progress-bar 1s ease-out forwards;
+}
+@keyframes progress-bar {
+	from {
+		width: 0%;
+	}
+	to {
+		width: var(--percentage, 0%);
+	}
+}
+
 .projects {
 	height: 100vh;
 	width: 100%;
@@ -286,4 +350,18 @@ section {
 		var(--nameG3),
 		var(--nameG1)
 	);
+}
+
+footer {
+	font-size: clamp(11px, 1vw, 16px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100%;
+	background-color: var(--bgDarkMode);
+}
+
+body.darkMode footer {
+	background-color: var(--bgLightMode);
 }

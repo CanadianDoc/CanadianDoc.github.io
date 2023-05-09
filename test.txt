@@ -42,3 +42,12 @@ https://www.shapedivider.app/
 body.darkMode .wave .shape-fill {
 	fill: var(--bgLightMode);
 }
+
+dark mode
+#b5d8eb,
+#a2d2c2,
+#9fcdaf,
+#9cc79d,
+#9dc294,
+#abd98c,
+#c2df86
