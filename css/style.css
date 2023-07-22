@@ -243,95 +243,57 @@ body.darkMode .menubar {
 }
 
 section {
-	padding: 100px 20vw;
+	padding: 0 10vw;
+	height: 100vh;
 }
 
-.skills {
-	padding: 50px 24px;
-	list-style: none;
-	height: 110vh;
-	width: 50%;
-	color: var(--textDarkMode);
-	background-color: var(--bgDarkMode);
-	align-items: revert;
-	list-style: none;
+section > h1 {
+	font-size: 2rem;
 }
-body.darkMode .skills {
-	background-color: var(--bgLightMode);
-	color: var(--textLightMode);
-}
-.skills h1 {
-	text-align: center;
-}
-h3 {
-	margin: 5px;
-}
-.skills li {
-	margin: 20px 0;
-	padding: 10px;
-}
-.sbar {
-	background: var(--skillBarColourDarkMode);
-	display: block;
-	height: 20px;
-	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-		0 1px 2px rgba(0, 0, 0, 1);
-	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-body.darkMode .sbar {
-	background: var(--skillBarColourLightMode);
-}
-.sbar:hover {
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-		0 10px 10px rgba(0, 0, 0, 1);
-}
-.bar {
+
+.skillChart {
 	height: 100%;
-	float: left;
-	border-radius: 5px;
-	background: linear-gradient(
-		to right,
-		#5ca5e4,
-		#4cb0b8,
-		#4cb4a5,
-		#4bb994,
-		#50c08c,
-		#68c786,
-		#89ce80,
-		#b1d97a
-	);
-	transition: width 1s;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.show {
-	opacity: 1;
+
+.node circle {
+	stroke: var(--textDarkMode);
+	stroke-width: 2;
+	cursor: pointer;
+  }
+
+body.darkMode .node circle {
+	stroke: var(--textLightMode);
 }
-.bar.show {
-	width: var(--percentage, 0%);
+  
+.node text {
+	fill: var(--textDarkMode);
+	text-anchor: middle;
+	pointer-events: none;
 }
-.bar.animate {
-	animation: progress-bar 1s ease-out forwards;
+
+body.darkMode .node text {
+	fill: var(--textLightMode);
 }
-@keyframes progress-bar {
-	from {
-		width: 0%;
-	}
-	to {
-		width: var(--percentage, 0%);
-	}
+  
+.link {
+	stroke: var(--textDarkMode);
+	fill:none;
+	stroke-width: 1;
+}
+
+body.darkMode .link {
+	stroke: var(--textLightMode);
 }
 
 .projects {
+	margin-top: 100px;
 	height: 100vh;
-	width: 100%;
-	background: linear-gradient(
-		to right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3),
-		var(--nameG1)
-	);
+	width: 100vw;
+	
 }
 
 .aboutMe {
@@ -341,16 +303,22 @@ body.darkMode .sbar {
 }
 
 .contactMe {
-	height: 100vh;
-	width: 100%;
-	background: linear-gradient(
-		to right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3),
-		var(--nameG1)
-	);
+	height: 50vh;
 }
+.emailContainer {
+	padding-top: 100px;
+}
+
+.email {
+	font-size: 1.5rem;
+	transition: 0.7s ease;
+
+}
+.email:hover {
+	color: var(--aHighlight);
+	animation: bounce 0.5s forwards;
+}
+
 
 footer {
 	font-size: clamp(11px, 1vw, 16px);

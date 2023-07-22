@@ -51,3 +51,112 @@ dark mode
 #9dc294,
 #abd98c,
 #c2df86
+
+
+<h1>Skills</h1>
+        <li class="s1">
+          <h3>JavaScript</h3>
+          <span class="sbar"><span class="bar sbar1" data-percentage="85"></span></span>
+        </li>
+        <li class="s2">
+          <h3>Java</h3>
+          <span class="sbar"><span class="bar sbar2" data-percentage="82"></span></span>
+        </li>
+        <li class="s3">
+          <h3>Python</h3>
+          <span class="sbar"><span class="bar sbar3" data-percentage="80"></span></span>
+        </li>
+        <li class="s4">
+          <h3>C#</h3>
+          <span class="sbar"><span class="bar sbar4" data-percentage="58"></span></span>
+        </li>
+        <li class="s5">
+          <h3>C++</h3>
+          <span class="sbar"><span class="bar sbar5" data-percentage="61"></span></span>
+        </li>
+
+.skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 50px 24px;
+	list-style: none;
+	height: 110vh;
+	color: var(--textDarkMode);
+	background-color: var(--bgDarkMode);
+	align-items: revert;
+	list-style: none;
+}
+body.darkMode .skills {
+	background-color: var(--bgLightMode);
+	color: var(--textLightMode);
+}
+.skills h1 {
+	text-align: center;
+}
+h3 {
+	margin: 5px;
+}
+.skills li {
+	margin: 20px 0;
+	padding: 10px;
+}
+.list {
+	width: 70%;
+}
+.info {
+	width: 25%;
+}
+
+.sbar {
+	background: var(--skillBarColourDarkMode);
+	display: block;
+	height: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 1);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+body.darkMode .sbar {
+	background: var(--skillBarColourLightMode);
+}
+.sbar:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+		0 10px 10px rgba(0, 0, 0, 1);
+}
+.bar {
+	height: 100%;
+	float: left;
+	border-radius: 5px;
+	background: linear-gradient(
+		to right,
+		#5ca5e4,
+		#4cb0b8,
+		#4cb4a5,
+		#4bb994,
+		#50c08c,
+		#68c786,
+		#89ce80,
+		#b1d97a
+	);
+	transition: width 1s;
+}
+.show {
+	opacity: 1;
+}
+.bar.show {
+	width: var(--percentage, 0%);
+}
+.bar.animate {
+	animation: progress-bar 1s ease-out forwards;
+}
+@keyframes progress-bar {
+	from {
+		width: 0%;
+	}
+	to {
+		width: var(--percentage, 0%);
+	}
+}
+
