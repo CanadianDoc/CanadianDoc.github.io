@@ -1,335 +1,368 @@
 :root {
-	--bgDarkMode: #141821;
-	--textDarkMode: white;
+  --bgDarkMode: #141821;
+  --textDarkMode: white;
 
-	--bgLightMode: white;
-	--textLightMode: black;
+  --bgLightMode: white;
+  --textLightMode: black;
 
-	/*--aHighlight: #00ff00;*/
-	--aHighlight: #5cb85c;
+  /*--aHighlight: #00ff00;*/
+  --aHighlight: #5cb85c;
 
-	--nameG1: #ff94c2;
-	--nameG2: #8fc1e3;
-	--nameG3: #c0d461;
+  --nameG1: #ff94c2;
+  --nameG2: #8fc1e3;
+  --nameG3: #c0d461;
 
-	--skillBarColourDarkMode: #353b48;
-	--skillBarColourLightMode: #e9ecef;
+  --skillBarColourDarkMode: #353b48;
+  --skillBarColourLightMode: #e9ecef;
 }
 
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: var(--bgDarkMode);
-	color: var(--textDarkMode);
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	height: 100vh;
-	margin: 0px;
-	overflow-x: hidden;
+  background-color: var(--bgDarkMode);
+  color: var(--textDarkMode);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 .navLink i {
-	color: var(--textDarkMode);
+  color: var(--textDarkMode);
 }
 i:hover {
-	color: var(--aHighlight) !important;
-	animation: bounce 0.5s forwards;
+  color: var(--aHighlight) !important;
+  animation: bounce 0.5s forwards;
 }
 @keyframes bounce {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-5px);
-	}
-	100% {
-		transform: translateY(0);
-	}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 a:hover {
-	color: inherit;
+  color: inherit;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 body.darkMode {
-	background-color: var(--bgLightMode);
-	color: var(--textLightMode);
+  background-color: var(--bgLightMode);
+  color: var(--textLightMode);
 }
 body.darkMode .navLogo {
-	color: var(--textLightMode);
+  color: var(--textLightMode);
 }
 body.darkMode .navLink i {
-	color: var(--textLightMode);
+  color: var(--textLightMode);
 }
 
 body.darkMode .navbar {
-	background-color: var(--bgLightMode);
+  background-color: var(--bgLightMode);
 }
 
 .navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 24px;
-	background: var(--bgDarkMode);
-	z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: var(--bgDarkMode);
+  z-index: 10;
 }
 
 .navLink {
-	position: relative;
+  position: relative;
 }
 
 .navText {
-	position: absolute;
-	bottom: -25px;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
-	font-weight: bold;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-weight: bold;
 }
 .navLink:hover .navText {
-	opacity: 1;
+  opacity: 1;
 }
 
 .navMenu {
-	display: flex;
-	justify-content: space-between;
-	align-items: right;
-	gap: 60px;
-	margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  gap: 60px;
+  margin-right: 70px;
 }
 .navLink,
 .navLogo {
-	transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 .menuIcon {
-	display: none;
-	cursor: pointer;
-	padding-right: 40px;
+  display: none;
+  cursor: pointer;
+  padding-right: 40px;
 }
 .menubar {
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px auto;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	background-color: var(--textDarkMode);
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--textDarkMode);
 }
 body.darkMode .menubar {
-	background-color: var(--textLightMode);
+  background-color: var(--textLightMode);
 }
 @media (max-width: 1024px) {
-	.menuIcon {
-		display: block;
-	}
+  .menuIcon {
+    display: block;
+  }
 
-	.menuIcon.active .menubar:nth-child(2) {
-		opacity: 0;
-	}
-	.menuIcon.active .menubar:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
-	.menuIcon.active .menubar:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
+  .menuIcon.active .menubar:nth-child(2) {
+    opacity: 0;
+  }
+  .menuIcon.active .menubar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menuIcon.active .menubar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-	.navMenu {
-		position: fixed;
-		left: -100%;
-		top: 70px;
-		gap: 0;
-		flex-direction: column;
-		width: 100%;
-		text-align: center;
-		transition: 0.3s;
-		background-color: var(--bgDarkMode);
-	}
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: var(--bgDarkMode);
+  }
 
-	.navMenu #bulb {
-		margin-bottom: 30px;
-	}
+  .navMenu #bulb {
+    margin-bottom: 30px;
+  }
 
-	body.darkMode .navMenu {
-		background-color: var(--bgLightMode);
-	}
+  body.darkMode .navMenu {
+    background-color: var(--bgLightMode);
+  }
 
-	.navItem {
-		margin: 20px 0;
-	}
+  .navItem {
+    margin: 20px 0;
+  }
 
-	.navMenu.active {
-		left: 0;
-	}
+  .navMenu.active {
+    left: 0;
+  }
 }
 
 .intro {
-	padding: 0 24px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100vh;
-	width: 100%;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .intro > h1 {
-	padding: 35% 0;
-	text-align: left;
-	font-size: 6vw;
+  padding: 35% 0;
+  text-align: left;
+  font-size: 6vw;
 }
 
 @keyframes background-pan {
-	from {
-		background-position: 0% center;
-	}
-	to {
-		background-position: -200% center;
-	}
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
 }
 .nameGradient {
-	animation: background-pan 3s linear infinite;
-	background: linear-gradient(
-		to right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3),
-		var(--nameG1)
-	);
-	background-size: 200%;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	white-space: nowrap;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--nameG1),
+    var(--nameG2),
+    var(--nameG3),
+    var(--nameG1)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 .jobGradient {
-	/* Note to self, think about change jobGradient later*/
-	animation: background-pan 3s linear infinite;
-	background: linear-gradient(
-		to right,
-		var(--nameG1),
-		var(--nameG2),
-		var(--nameG3),
-		var(--nameG1)
-	);
-	background-size: 200%;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	white-space: nowrap;
+  /* Note to self, think about change jobGradient later*/
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--nameG1),
+    var(--nameG2),
+    var(--nameG3),
+    var(--nameG1)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 section {
-	padding: 0 10vw;
-	height: 100vh;
+  padding: 0 10vw;
+  height: 100vh;
 }
 
 section > h1 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .skillChart {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .node circle {
-	stroke: var(--textDarkMode);
-	stroke-width: 2;
-	cursor: pointer;
-  }
+  stroke: var(--textDarkMode);
+  stroke-width: 2;
+  cursor: pointer;
+}
 
 body.darkMode .node circle {
-	stroke: var(--textLightMode);
+  stroke: var(--textLightMode);
 }
-  
+
 .node text {
-	fill: var(--textDarkMode);
-	text-anchor: middle;
-	pointer-events: none;
+  fill: var(--textDarkMode);
+  text-anchor: middle;
+  pointer-events: none;
 }
 
 body.darkMode .node text {
-	fill: var(--textLightMode);
+  fill: var(--textLightMode);
 }
-  
+
 .link {
-	stroke: var(--textDarkMode);
-	fill:none;
-	stroke-width: 1;
+  stroke: var(--textDarkMode);
+  fill: none;
+  stroke-width: 1;
 }
 
 body.darkMode .link {
-	stroke: var(--textLightMode);
+  stroke: var(--textLightMode);
 }
 
 .projects {
-	margin-top: 100px;
-	height: 100vh;
-	width: 100vw;
-	
+  margin-top: 100px;
+  min-height: 100vh;
+}
+
+.timeline {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.year {
+  position: relative;
+  color: var(--textDarkMode);
+  width: 80px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px 0;
+  z-index: 1;
+}
+
+.line {
+  width: 2px;
+  height: 100px;
+  background: var(--textDarkMode);
+}
+
+@media (max-width: 1070px) {
+  .projects {
+    min-height: 140vh;
+  }
 }
 
 .aboutMe {
-	height: 100vh;
-	width: 100%;
-	background-color: var(--bgDarkMode);
+  clear: both;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bgDarkMode);
+}
+
+@media (max-width: 1070px) {
+  .aboutMe {
+    margin-top: 100px;
+  }
 }
 
 .contactMe {
-	height: 50vh;
+  height: 50vh;
 }
 .emailContainer {
-	padding-top: 100px;
+  padding-top: 100px;
 }
 
 .email {
-	font-size: 1.5rem;
-	transition: 0.7s ease;
-
+  font-size: 1.5rem;
+  transition: 0.7s ease;
 }
 .email:hover {
-	color: var(--aHighlight);
-	animation: bounce 0.5s forwards;
+  color: var(--aHighlight);
+  animation: bounce 0.5s forwards;
 }
 
-
 footer {
-	font-size: clamp(11px, 1vw, 16px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100px;
-	width: 100%;
-	background-color: var(--bgDarkMode);
+  font-size: clamp(11px, 1vw, 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: var(--bgDarkMode);
 }
 
 body.darkMode footer {
-	background-color: var(--bgLightMode);
+  background-color: var(--bgLightMode);
 }
