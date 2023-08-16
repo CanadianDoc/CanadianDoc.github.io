@@ -160,3 +160,5 @@ body.darkMode .sbar {
 	}
 }
 
+
+color: ["#ff94c2", "#8fc1e3", "#c0d461"][Math.floor(Math.random() * 3)]

@@ -1,0 +1,104 @@
+:root {
+  --bgDarkMode: #141821;
+  --textDarkMode: white;
+  --aHighlight: #5cb85c;
+  --nameG1: #ff94c2;
+  --nameG2: #8fc1e3;
+  --nameG3: #c0d461;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: var(--bgDarkMode);
+  color: var(--textDarkMode);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+.nameGradient,
+.jobGradient {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--nameG1),
+    var(--nameG2),
+    var(--nameG3),
+    var(--nameG1)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.intro > h1 {
+  padding-left: 25px;
+  padding-top: 10%;
+  text-align: left;
+  font-size: 6vw;
+}
+
+.undercon,
+.progress {
+  font-size: 3vw;
+  margin-top: -3vh;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.progressbar {
+  width: 90%;
+  background-color: transparent;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid var(--textDarkMode);
+  position: relative;
+  overflow: hidden; /* Hide overflow to ensure only the intended portion of canvas is visible */
+  height: 40px;
+}
+
+canvas#vialCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+.icons {
+  margin-top: 50px;
+}
+
+.navLink {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #2196f3;
+}
