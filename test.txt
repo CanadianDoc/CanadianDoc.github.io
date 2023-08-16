@@ -162,3 +162,30 @@ body.darkMode .sbar {
 
 
 color: ["#ff94c2", "#8fc1e3", "#c0d461"][Math.floor(Math.random() * 3)]
+
+#github i {
+  border-radius: 25%;
+  background: transparent;
+}
+
+#github i:hover {
+  background-image: linear-gradient(
+    115deg,
+    var(--githubg1),
+    var(--githubg2),
+    var(--githubg3),
+    var(--githubg1)
+  );
+  box-shadow: 0 0 15px 5px var(--githubg1), 0 0 20px 10px var(--githubg2),
+    0 0 25px 15px var(--githubg3);
+  animation: rotate 0.4s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+

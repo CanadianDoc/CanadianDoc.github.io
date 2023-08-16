@@ -32,10 +32,18 @@ for (let i = 0; i < cols; i++) {
       originalX: x,
       originalY: y,
       radius: radius,
-      color: ["#ff94c2", "#8fc1e3", "#c0d461"][Math.floor(Math.random() * 3)],
+      color: [
+        "#ff94c2",
+        "#8fc1e3",
+        "#c0d461",
+        "#cdb4db",
+        "#80a8c7",
+        "#a9d18e",
+        "#f4a6d7",
+      ][Math.floor(Math.random() * 7)], //colours
       dx: (Math.random() - 0.5) * 0.1,
       dy: (Math.random() - 0.5) * 0.1,
-      angle: Math.random() * (2 * Math.PI), // Added angle for oscillation
+      angle: Math.random() * (2 * Math.PI),
     });
 
     count++;

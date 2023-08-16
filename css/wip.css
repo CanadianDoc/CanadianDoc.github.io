@@ -1,10 +1,13 @@
 :root {
   --bgDarkMode: #141821;
   --textDarkMode: white;
-  --aHighlight: #5cb85c;
   --nameG1: #ff94c2;
   --nameG2: #8fc1e3;
   --nameG3: #c0d461;
+  --github: #cdb4db;
+  --linkedin: #80a8c7;
+  --resume: #a9d18e;
+  --email: #f4a6d7;
 }
 
 body {
@@ -79,7 +82,7 @@ a {
   border-radius: 10px;
   border: 2px solid var(--textDarkMode);
   position: relative;
-  overflow: hidden; /* Hide overflow to ensure only the intended portion of canvas is visible */
+  overflow: hidden;
   height: 40px;
 }
 
@@ -89,16 +92,66 @@ canvas#vialCanvas {
 }
 
 .icons {
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .navLink {
-  margin: 0 10px;
+  margin: 0 5%;
   font-size: 24px;
-  color: #333;
-  transition: color 0.3s;
+  color: var(--textDarkMode);
+  position: relative;
 }
 
-.navLink:hover {
-  color: #2196f3;
+.navLink::before {
+  content: attr(data);
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.navLink:hover::before {
+  opacity: 1;
+}
+
+i {
+  color: var(--textDarkMode);
+  transition: transform 0.3s 0.1s, color 0.3s;
+  border-radius: 25%;
+  background: transparent;
+}
+
+#github i:hover,
+#linkedin i:hover,
+#resume i:hover,
+#email i:hover {
+  transform: scale(1.1);
+}
+
+#github i:hover {
+  color: var(--github);
+}
+
+#linkedin i:hover {
+  color: var(--linkedin);
+}
+
+#resume i:hover {
+  color: var(--resume);
+}
+
+#email i:hover {
+  color: var(--email);
+}
+
+footer {
+  font-size: clamp(11px, 1vw, 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
