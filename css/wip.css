@@ -1,13 +1,20 @@
 :root {
   --bgDarkMode: #141821;
   --textDarkMode: white;
+
+  --bgLightMode: white;
+  --textLightMode: black;
+
   --nameG1: #ff94c2;
   --nameG2: #8fc1e3;
   --nameG3: #c0d461;
+
   --github: #cdb4db;
   --linkedin: #80a8c7;
   --resume: #a9d18e;
   --email: #f4a6d7;
+  --darkMode: #faf3c0;
+  --lightMode: #ffd8a8;
 }
 
 body {
@@ -20,6 +27,15 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+body.darkMode {
+  background-color: var(--bgLightMode);
+  color: var(--textLightMode);
+}
+body.darkMode .navLogo,
+body.darkMode .navLink i {
+  color: var(--textLightMode);
 }
 
 a {
@@ -86,6 +102,10 @@ a {
   height: 40px;
 }
 
+body.darkMode .progressbar {
+  border: 2px solid var(--textLightMode);
+}
+
 canvas#vialCanvas {
   width: 100%;
   height: 100%;
@@ -115,6 +135,10 @@ canvas#vialCanvas {
   white-space: nowrap;
 }
 
+body.darkMode .navLink:hover::before {
+  color: var(--textLightMode);
+}
+
 .navLink:hover::before {
   opacity: 1;
 }
@@ -129,7 +153,8 @@ i {
 #github i:hover,
 #linkedin i:hover,
 #resume i:hover,
-#email i:hover {
+#email i:hover,
+#darkMode i:hover {
   transform: scale(1.1);
 }
 
@@ -147,6 +172,14 @@ i {
 
 #email i:hover {
   color: var(--email);
+}
+
+#darkMode i:hover {
+  color: var(--darkMode);
+}
+
+body.darkMode #darkMode i:hover {
+  color: var(--lightMode);
 }
 
 footer {
